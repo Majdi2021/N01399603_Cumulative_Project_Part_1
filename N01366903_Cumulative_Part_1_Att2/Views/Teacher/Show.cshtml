@@ -1,0 +1,49 @@
+﻿@model List<N01366903_Cumulative_Part_1_Att2.Models.CoursesViewModel>
+@{
+    ViewBag.Title = "Show";
+}
+
+    <h2>Courses Tought by Teachers</h2>
+        <div>
+  
+            <table>
+                <thead>
+                    <tr>
+                        <td>Teacher Id</td>
+                        <td>Class Id</td>
+                        <td>Class code</td>
+                        <td>Class Name</td>
+                        <td>Start Date</td>
+                        <td>End Date</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    @{
+                        foreach (var i in Model)
+                        {
+                            <tr>
+                                <td>
+                                    @Html.DisplayFor(modelItem => @i.teacherid)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => @i.classid)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => @i.classcode)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => @i.classname)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => @i.startdate)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => @i.finishdate)
+                                </td>
+                            </tr>
+                        }
+                    }
+                </tbody>
+            </table>
+        </div>
+

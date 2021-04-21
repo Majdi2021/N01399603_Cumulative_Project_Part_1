@@ -1,0 +1,45 @@
+﻿@model List<N01366903_Cumulative_Part_1_Att2.Models.Teacher>
+@{
+    ViewBag.Title = "List";
+}
+
+<h2>List of Teachers</h2>
+
+<div>
+    <table>
+        <thead>
+            <tr>
+                <td>Teacher Id</td>
+                <td>First Name</td>
+                <td>Last Name</td>
+                <td>Hire Date </td>
+                <td>Salary</td>
+                <td>Show</td>
+            </tr>
+        </thead>
+        <tbody>
+            @{
+                    foreach (var i in Model)
+                    {
+                        <tr>
+                            <td>
+                                @Html.DisplayFor(modelItem => @i.teacherid)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => @i.teacherfname)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => @i.teacherlname)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => @i.hiredate)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => @i.salary)
+                            </td>
+                        </tr>
+                    }
+             }
+        </tbody>
+    </table>
+</div>
